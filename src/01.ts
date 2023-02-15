@@ -8,7 +8,6 @@ export function mult(a:number, b: number) {
 
 
 export function splitIntoWords(sentens: string) {
-    //return ['Hello', 'my', 'world'];
     return sentens.split(' ')
         .filter(w => w !== '' && w !== '-');
 }

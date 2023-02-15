@@ -1,50 +1,50 @@
 import {mult, splitIntoWords, sum} from "./01";
 
-test('sum should be correct', () => {
-    //data
-    let a = 1;
-    let b = 2;
-    let c = 3;
 
-    //action
-    const result = sum(a, b);
+let a: number;
+let b: number;
+let c: number;
+
+beforeEach(() => {
+    a = 1;
+    b = 2;
+    c = 3;
+})
+
+test('result sum', () => {
+    //active
+    const result1 = sum(a, b);
     const result2 = sum(b, c);
 
-
-    //expect result
-    expect(result).toBe(3);
+    //expect
+    expect(result1).toBe(3);
     expect(result2).toBe(5);
-
 });
 
-test('mult should be correct', () => {
-   let a = 1;
-   let b = 2;
-   let c = 3;
+test('mult result', () => {
+    const result1 = mult(a, b);
+    const result2 = mult(b, c);
 
-   const result = mult(a, b);
-   const result2 = mult(b, c);
-
-   expect(result).toBe(2);
-   expect(result2).toBe(6);
+    expect(result1).toBe(2);
+    expect(result2).toBe(6);
 });
 
-test('splitting into words should be correct', () => {
-    let a = 'Hello my world';
-    let b = 'Js - the best programming language';
+test('sent', () => {
+    let sentens = 'Hello my world';
+    let sentens2 = 'Js - the best programming language';
 
-    const result1 = splitIntoWords(a);
-    const result2 = splitIntoWords(b);
+    const sent1 = splitIntoWords(sentens);
+    const sent2 = splitIntoWords(sentens2);
 
-    expect(result1.length).toBe(3);
-    expect(result1[0]).toBe('Hello');
-    expect(result1[1]).toBe('my');
-    expect(result1[2]).toBe('world');
+    expect(sent1.length).toBe(3);
+    expect(sent1[0]).toBe('Hello');
+    expect(sent1[1]).toBe('my');
+    expect(sent1[2]).toBe('world');
 
-    expect(result2.length).toBe(5);
-    expect(result2[0]).toBe('Js');
-    expect(result2[1]).toBe('the');
-    expect(result2[2]).toBe('best');
-    expect(result2[3]).toBe('programming');
-    expect(result2[4]).toBe('language');
+    expect(sent2.length).toBe(5);
+    expect(sent2[0]).toBe('Js');
+    expect(sent2[1]).toBe('the');
+    expect(sent2[2]).toBe('best');
+    expect(sent2[3]).toBe('programming');
+    expect(sent2[4]).toBe('language');
 });
