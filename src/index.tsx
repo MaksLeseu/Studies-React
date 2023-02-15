@@ -3,6 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {splitIntoWords} from "./01";
+
+
+const sentense = 'Hello my world';
+console.log(splitIntoWords(sentense));
+
+
+
+
+
+
+
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
