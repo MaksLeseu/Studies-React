@@ -1,0 +1,68 @@
+import {addMoneyToBudget, repairHouse, toFireStaff, toHireStaff} from "./03_02";
+import {CityType} from "./03_02_01";
+
+let city: CityType;
+
+beforeEach(() => {
+    city = {
+        title: 'New York',
+        houses: [
+            {
+                buildeAt: 2012, repaired: false,
+                address: {number: 100, street: {title: 'White street'}}
+            }, {
+                buildeAt: 2008, repaired: false,
+                address: {number: 100, street: {title: 'Happy street'}}
+            }, {
+                buildeAt: 2020, repaired: false,
+                address: {number: 101, street: {title: 'Happy street'}}
+            }
+        ],
+        governmentBuildings: [
+            {
+                type: 'HOSPITAL', budget: 200000, staffCount: 200,
+                address: {
+                    street: {
+                        title: 'Central Str'
+                    }
+                }
+            }, {
+                type: 'FIRE-STATION', budget: 500000, staffCount: 1000,
+                address: {
+                    street: {
+                        title: 'South Str'
+                    }
+                }
+            }
+        ],
+        citizensNumber: 1000000
+    }
+});
+
+// Создать в отдельном файле функцию, чтобы тесты прошли
+
+test('Budget should be changed for HOSPITAL', () => {
+    addMoneyToBudget(city.governmentBuildings[0], 100000);
+
+    expect(city.governmentBuildings[0].budget).toBe(300000);
+});
+
+test('House', () => {
+    repairHouse(city.houses[1]);
+
+    expect(city.houses[1].repaired).toBeTruthy();
+});
+
+test('staff', () => {
+    toFireStaff(city.governmentBuildings[0], 20);
+
+    expect(city.governmentBuildings[0].staffCount).toBe(180);
+});
+
+test('staff plus', () => {
+   toHireStaff(city.governmentBuildings[0], 20);
+
+   expect(city.governmentBuildings[0].staffCount).toBe(220);
+});
+
+
