@@ -1,0 +1,15 @@
+.parents-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    border: none;
+    margin-top: 50px;
+    margin-left: 10px;
+}
