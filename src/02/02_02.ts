@@ -3,6 +3,7 @@ export type CityType = {
     houses: Array<ObjHousesType>
     governmentBuildings: Array<[]>
     citizensNumber: number
+
 }
 
 type ObjHousesType = {

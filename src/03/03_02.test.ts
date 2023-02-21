@@ -1,4 +1,11 @@
-import {addMoneyToBudget, repairHouse, toFireStaff, toHireStaff} from "./03_02";
+import {
+    addMoneyToBudget,
+    demolishHousesOnTheStreet,
+    getBuildingsWithStaffCountGreaterThen,
+    repairHouse,
+    toFireStaff,
+    toHireStaff
+} from "./03_02";
 import {CityType} from "./03_02_01";
 
 let city: CityType;
@@ -8,13 +15,13 @@ beforeEach(() => {
         title: 'New York',
         houses: [
             {
-                buildeAt: 2012, repaired: false,
+                id: 1, buildeAt: 2012, repaired: false,
                 address: {number: 100, street: {title: 'White street'}}
             }, {
-                buildeAt: 2008, repaired: false,
+                id: 2, buildeAt: 2008, repaired: false,
                 address: {number: 100, street: {title: 'Happy street'}}
             }, {
-                buildeAt: 2020, repaired: false,
+                id: 3, buildeAt: 2020, repaired: false,
                 address: {number: 101, street: {title: 'Happy street'}}
             }
         ],
@@ -63,6 +70,20 @@ test('staff plus', () => {
    toHireStaff(city.governmentBuildings[0], 20);
 
    expect(city.governmentBuildings[0].staffCount).toBe(220);
+});
+
+test('Houses should be destroyed', () => {
+    demolishHousesOnTheStreet(city, 'Happy street');
+
+    expect(city.houses.length).toBe(1);
+    expect(city.houses[0].id).toBe(1);
+});
+
+test('Buildings with correct staff count', () => {
+    let buildings = getBuildingsWithStaffCountGreaterThen(city.governmentBuildings, 500);
+
+    expect(buildings.length).toBe(1);
+    expect(buildings[0].type).toBe('FIRE-STATION');
 });
 
 

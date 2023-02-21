@@ -1,4 +1,4 @@
-import {GovernmentBuildingsType, CityType, HousesType} from "./03_02_01";
+import {GovernmentBuildingsType, CityType, HousesType, StreetType} from "./03_02_01";
 
 let city = {
     title: 'New York',
@@ -49,4 +49,12 @@ export function toFireStaff(obj: GovernmentBuildingsType, number: number) {
 
 export function toHireStaff(staff: GovernmentBuildingsType, number: number) {
     staff.staffCount += number;
+}
+
+export function demolishHousesOnTheStreet(city: CityType, street: string) {
+    city.houses = city.houses.filter(i => i.address.street.title !== street);
+}
+
+export function getBuildingsWithStaffCountGreaterThen(staff: Array<GovernmentBuildingsType>, number: number) {
+     return staff.filter(i => i.staffCount > number);
 }

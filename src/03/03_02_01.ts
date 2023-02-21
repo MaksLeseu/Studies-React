@@ -9,6 +9,7 @@ export type HousesType = {
     buildeAt: number
     repaired: boolean
     address: AdressType
+    id?: number
 }
 
 type AdressType = {
@@ -16,7 +17,7 @@ type AdressType = {
     street: StreetType
 }
 
-type StreetType = {
+export type StreetType = {
     title: string
 }
 
