@@ -1,7 +1,7 @@
 import {
-    addMoneyToBudget,
+    addMoneyToBudget, createMessage,
     demolishHousesOnTheStreet,
-    getBuildingsWithStaffCountGreaterThen,
+    getBuildingsWithStaffCountGreaterThen, getStreetsTitlesOfGovernmentBuildings, getStreetsTitlesOfHouse,
     repairHouse,
     toFireStaff,
     toHireStaff
@@ -84,6 +84,32 @@ test('Buildings with correct staff count', () => {
 
     expect(buildings.length).toBe(1);
     expect(buildings[0].type).toBe('FIRE-STATION');
+});
+
+test('List of streets titles of governments buildings', () => {
+    let streetName = getStreetsTitlesOfGovernmentBuildings(city.governmentBuildings);
+
+    expect(streetName.length).toBe(2);
+    expect(streetName[0]).toBe('Central Str');
+    expect(streetName[1]).toBe('South Str');
+});
+
+test('List of streets titles', () => {
+    let streets = getStreetsTitlesOfHouse(city.houses);
+
+    expect(streets.length).toBe(3);
+    expect(streets[0]).toBe('White street');
+    expect(streets[1]).toBe('Happy street');
+    expect(streets[2]).toBe('Happy street');
+});
+
+test('create message', () => {
+   let messages = createMessage(city.houses);
+
+   expect(messages.length).toBe(3);
+   expect(messages[0]).toBe('Hello guys from White street');
+   expect(messages[1]).toBe('Hello guys from Happy street');
+   expect(messages[2]).toBe('Hello guys from Happy street');
 });
 
 

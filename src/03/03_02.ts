@@ -58,3 +58,15 @@ export function demolishHousesOnTheStreet(city: CityType, street: string) {
 export function getBuildingsWithStaffCountGreaterThen(staff: Array<GovernmentBuildingsType>, number: number) {
      return staff.filter(i => i.staffCount > number);
 }
+
+export function getStreetsTitlesOfGovernmentBuildings(street: Array<GovernmentBuildingsType>) {
+    return  street.map(i => i.address.street.title);
+}
+
+export function getStreetsTitlesOfHouse(house: Array<HousesType>) {
+    return house.map(i => i.address.street.title);
+}
+
+export function createMessage(message: Array<HousesType>) {
+    return message.map(i => `Hello guys from ${i.address.street.title}`);
+}
