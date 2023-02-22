@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import App from "../App";
+import '../App.css'
 
 
 type ItemType = {
@@ -28,9 +29,9 @@ export function NewComponent(props: NewComponentType) {
                     )
                 })}
             </ul>
-            <button onClick={() => props.func('all')}>all</button>
-            <button onClick={() => props.func('dollar')}>dollar</button>
-            <button onClick={() => props.func('ruble')}>ruble</button>
+            <button className={'btn'} onClick={() => props.func('all')}>all</button>
+            <button className={'btn'} onClick={() => props.func('dollar')}>dollar</button>
+            <button className={'btn'} onClick={() => props.func('ruble')}>ruble</button>
         </>
     )
 }

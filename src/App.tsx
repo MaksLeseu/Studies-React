@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {NewComponent} from "./05/05";
+import {Input} from "./06/06";
 
 function App() {
 
@@ -13,6 +14,12 @@ function App() {
         {banknote: 'ruble', nominal: 100, number: 'r1234567890'},
         {banknote: 'dollar', nominal: 50, number: 'x1234567890'},
         {banknote: 'ruble', nominal: 50, number: 'v1234567890'}
+    ]);
+
+    let [message, setMessage] = useState([
+        {message: 'message1'},
+        {message: 'message2'},
+        {message: 'message3'}
     ]);
 
     const [filter, setFilter] = useState('all');
@@ -32,10 +39,18 @@ function App() {
         setFilter(nameButton);
     }
 
+
   return (
       <div className={'container'}>
           <NewComponent func={filterHandler} current={currentMoney}/>
+          <Input message={message} setMessage={setMessage}/>
+          <div>{message.map((el, index) => {
+              return (
+                  <div key={index}>{el.message}</div>
+              )
+          })}</div>
       </div>
+
   );
 }
 
