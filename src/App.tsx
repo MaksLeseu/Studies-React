@@ -4,6 +4,7 @@ import {Input} from "./06/06";
 import {InputTwo} from "./06/Input";
 import {Button} from "./06/Button";
 import {ButtonOnOff} from "./ButtonOnOff/ButtonOnOff";
+import {Accordion} from "./Accordion/Accordion";
 
 function App() {
 
@@ -45,6 +46,9 @@ function App() {
           })}</div>*/}
           <ButtonOnOff value={true}/>
           <ButtonOnOff value={false}/>
+
+          <Accordion title={'Title - One'} collapsed={true} />
+          <Accordion title={'Title - Two'} collapsed={false} />
       </div>
 
   );
