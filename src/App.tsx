@@ -3,6 +3,7 @@ import './App.css';
 import {Input} from "./06/06";
 import {InputTwo} from "./06/Input";
 import {Button} from "./06/Button";
+import {ButtonOnOff} from "./ButtonOnOff/ButtonOnOff";
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
           {/*    )*/}
           {/*})}</div>*/}
 
-          <InputTwo
+          {/*<InputTwo
               message={message}
               setMessage={setMessage}
               setTitle={setTitle}
@@ -41,7 +42,9 @@ function App() {
               return (
                   <div key={index}>{el.message}</div>
               )
-          })}</div>
+          })}</div>*/}
+          <ButtonOnOff value={true}/>
+          <ButtonOnOff value={false}/>
       </div>
 
   );
