@@ -5,6 +5,7 @@ import {InputTwo} from "./06/Input";
 import {Button} from "./06/Button";
 import {ButtonOnOff} from "./ButtonOnOff/ButtonOnOff";
 import {Accordion} from "./Accordion/Accordion";
+import {Star} from "./Star/Star";
 
 function App() {
 
@@ -49,6 +50,11 @@ function App() {
 
           <Accordion title={'Title - One'} collapsed={true} />
           <Accordion title={'Title - Two'} collapsed={false} />
+
+          <Star level={3} />
+          <Star level={4} />
+          <Star level={0} />
+          <Star level={5} />
       </div>
 
   );
