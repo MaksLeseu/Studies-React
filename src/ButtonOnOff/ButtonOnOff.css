@@ -1,9 +1,11 @@
 .on {
     background-color: green;
+    border: 1px green solid;
 }
 
 .off {
     background-color: red;
+    border: 1px red solid;
 }
 
 .circle-green {
