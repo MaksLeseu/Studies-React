@@ -54,7 +54,7 @@ function App() {
           <Accordion title={'Title - One'} collapsed={true} />
           <Accordion title={'Title - Two'} collapsed={false} />*/}
 
-          <Star level={levelStar} setLevelStar={setLevelStar} />
+          <Star level={levelStar} onClick={setLevelStar} />
       </div>
 
   );
