@@ -16,6 +16,8 @@ function App() {
         {message: 'message3'}
     ]);
 
+    let [accordionBody, setAccordionBody] = useState<boolean> (false);
+
 
   return (
       <div className={'container'}>
@@ -44,11 +46,14 @@ function App() {
                   <div key={index}>{el.message}</div>
               )
           })}</div>*/}
-          <ButtonOnOff value={true}/>
-          <ButtonOnOff value={false}/>
+         {/* <ButtonOnOff value={true}/>
+          <ButtonOnOff value={false}/>*/}
 
-          <Accordion title={'Title - One'} collapsed={true} />
-          <Accordion title={'Title - Two'} collapsed={false} />
+          <Accordion
+              title={'Title - One'}
+              collapsed={accordionBody}
+              setAccordionBody={setAccordionBody}
+          />
       </div>
 
   );
