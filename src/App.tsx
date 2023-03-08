@@ -21,15 +21,6 @@ function App() {
 
     let [levelStar, setLevelStar] = useState <LevelStarType>(0);
 
-    function changeLevelStar(id: number) {
-        if (id === 1) levelStar === 1 ? setLevelStar(0) : setLevelStar(1);
-        if (id === 2) levelStar === 2 ? setLevelStar(1) : setLevelStar(2);
-        if (id === 3) levelStar === 3 ? setLevelStar(2) : setLevelStar(3);
-        if (id === 4) levelStar === 4 ? setLevelStar(3) : setLevelStar(4);
-        if (id === 5) levelStar === 5 ? setLevelStar(4) : setLevelStar(5);
-    }
-
-
   return (
       <div className={'container'}>
           {/*<Input message={message} setMessage={setMessage}/>*/}
@@ -63,7 +54,7 @@ function App() {
           <Accordion title={'Title - One'} collapsed={true} />
           <Accordion title={'Title - Two'} collapsed={false} />*/}
 
-          <Star level={levelStar} changeLevelStar={changeLevelStar} />
+          <Star level={levelStar} setLevelStar={setLevelStar} />
       </div>
 
   );
