@@ -1,15 +1,12 @@
 import React from "react";
 
-type AccordionBodyPropsType = {
 
-}
-
-export function AccordionBody(props: AccordionBodyPropsType) {
+export function AccordionBody() {
     return (
         <ul>
-            <li>1</li>
-            <li>11</li>
-            <li>111</li>
+            <li>Html</li>
+            <li>CSS and SCSS</li>
+            <li>JavaScript and React</li>
         </ul>
     )
 }

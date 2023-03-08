@@ -13,9 +13,8 @@ export function Accordion(props: AccordionPropsType) {
 
     return (
         <div>
-            { props.title }
-            <button onClick={listDropdown}>Click</button>
-            { !!props.collapsed && <AccordionBody /> }
+            <h3 onClick={listDropdown}>{ props.title }</h3>
+            { props.collapsed && <AccordionBody /> }
         </div>
     )
 }

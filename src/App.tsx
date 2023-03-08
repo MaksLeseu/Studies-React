@@ -50,7 +50,7 @@ function App() {
           <ButtonOnOff value={false}/>*/}
 
           <Accordion
-              title={'Title - One'}
+              title={'<-- Menu -->'}
               collapsed={accordionBody}
               setAccordionBody={setAccordionBody}
           />
