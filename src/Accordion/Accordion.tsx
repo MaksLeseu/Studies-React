@@ -9,7 +9,7 @@ type AccordionPropsType = {
 
 export function Accordion(props: AccordionPropsType) {
 
-    const listDropdown = () => props.collapsed ? props.setAccordionBody(false): props.setAccordionBody(true);
+    const listDropdown = () => props.setAccordionBody(!props.collapsed );
 
     return (
         <div>
