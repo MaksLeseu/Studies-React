@@ -8,17 +8,9 @@ type StarBodyPropsType = {
 export function StarBody(props: StarBodyPropsType) {
 
     if (props.completed === true) {
-        return (
-            <>
-                <span className={'star'}>Star </span>
-            </>
-        )
+        return  <span className={'star'}>Star </span>
     } else {
-        return (
-            <>
-                <span>Star </span>
-            </>
-        )
+        return <span>Star </span>
     }
 
 }
