@@ -3,8 +3,6 @@ import './App.css';
 import {Input} from "./06/06";
 import {InputTwo} from "./06/Input";
 import {Button} from "./06/Button";
-import {ButtonOnOff} from "./ButtonOnOff/ButtonOnOff";
-import {Accordion} from "./Accordion/Accordion";
 
 function App() {
 
@@ -16,8 +14,6 @@ function App() {
         {message: 'message3'}
     ]);
 
-    let [accordionBody, setAccordionBody] = useState<boolean> (false);
-
 
   return (
       <div className={'container'}>
@@ -28,7 +24,7 @@ function App() {
           {/*    )*/}
           {/*})}</div>*/}
 
-          {/*<InputTwo
+          <InputTwo
               message={message}
               setMessage={setMessage}
               setTitle={setTitle}
@@ -45,15 +41,7 @@ function App() {
               return (
                   <div key={index}>{el.message}</div>
               )
-          })}</div>*/}
-         {/* <ButtonOnOff value={true}/>
-          <ButtonOnOff value={false}/>*/}
-
-          <Accordion
-              title={'<-- Menu -->'}
-              collapsed={accordionBody}
-              setAccordionBody={setAccordionBody}
-          />
+          })}</div>
       </div>
 
   );

@@ -4,16 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {splitIntoWords} from "./01/01";
-
-
-const sentense = 'Hello my world';
-console.log(splitIntoWords(sentense));
-
-
-
-
-
-
+import {BrowserRouter} from "react-router-dom";
 
 
 
@@ -22,7 +13,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+          <App />
+      </BrowserRouter>
   </React.StrictMode>
 );
 

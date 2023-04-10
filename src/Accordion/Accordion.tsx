@@ -1,8 +1,11 @@
 import React, {useState} from "react";
 import {AccordionBody} from "./AccordionBody";
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     title: string
+    /**
+     *  Передает boolean [Marwn](accordion) value
+     */
     collapsed: boolean
     setAccordionBody: any
 }
