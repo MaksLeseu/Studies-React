@@ -31,3 +31,7 @@
 .button-navigate {
   margin-left: 10px;
 }
+
+.body {
+  display: flex;
+}

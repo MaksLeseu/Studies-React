@@ -1,31 +1,22 @@
 import React, {useState} from "react";
-import {ComponentMeta, Story} from '@storybook/react';
-import {Accordion, AccordionPropsType} from "./Accordion";
+import {Accordion} from "./Accordion";
+import {action} from "@storybook/addon-actions";
 
 
 export default {
-    title: 'components/Accordion title',
+    title: 'Accordion',
     Component: Accordion,
-
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof Accordion>
-
-
-const Template: Story<AccordionPropsType> = (args) => <Accordion {...args} />
-
-export const AccordionValueFalse = Template.bind({})
-AccordionValueFalse.args = {
-    title: 'Menu 1',
-    collapsed: false,
-    setAccordionBody: false,
 }
 
-export const AccordionValueTrue = Template.bind({})
-AccordionValueTrue.args = {
-    title: 'Menu 2',
-    collapsed: true,
-    setAccordionBody: true,
-}
 
+const callback = action('accordion mode')
+const onClickCallback = action('some item was clicked')
+
+export const MenuCollapsedMode = () => <Accordion title={'Menu'} collapsed={true} onChange={callback} items={[]} onClick={onClickCallback} />
+export const UsersUnCollapsedMode = () => <Accordion title={'Users'} collapsed={false} onChange={callback} items={[]} onClick={onClickCallback} />
+
+export const ModeChanged = () => {
+    const [value, setValue] = useState<boolean>(true)
+    const items = [{title: 'Html', value: 1}, {title: 'CSS and SCSS', value: 2}, {title: 'JavaScript and React', value: 3}]
+    return <Accordion title={'Users'} collapsed={value} onChange={() => setValue(!value)} items={items} onClick={onClickCallback} />
+}

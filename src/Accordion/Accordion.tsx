@@ -1,23 +1,25 @@
 import React, {useState} from "react";
 import {AccordionBody} from "./AccordionBody";
 
+export type ItemsPropsType = {
+    title: string
+    value: number
+}
+
 export type AccordionPropsType = {
     title: string
-    /**
-     *  Передает boolean [Marwn](accordion) value
-     */
     collapsed: boolean
-    setAccordionBody: any
+    items: ItemsPropsType[]
+    onChange: () => void
+    onClick: () => void
 }
 
 export function Accordion(props: AccordionPropsType) {
 
-    const listDropdown = () => props.setAccordionBody(!props.collapsed );
-
     return (
         <div>
-            <h3 onClick={listDropdown}>{ props.title }</h3>
-            { props.collapsed && <AccordionBody /> }
+            <h3 onClick={(e) => props.onChange()}>{ props.title }</h3>
+            { !props.collapsed && <AccordionBody items={props.items} onClick={props.onClick} /> }
         </div>
     )
 }

@@ -3,16 +3,19 @@ import './App.css';
 import {Input} from "./06/06";
 import {InputTwo} from "./06/Input";
 import {Button} from "./06/Button";
+import {Header} from "./components/Header/Header";
+import {Sidebar} from "./components/Sidebar/Sidebar";
+import {Content} from "./components/Content/Content";
 
 function App() {
 
-    let [title, setTitle] = useState('');
+    /*let [title, setTitle] = useState('');
 
     let [message, setMessage] = useState([
         {message: 'message1'},
         {message: 'message2'},
         {message: 'message3'}
-    ]);
+    ]);*/
 
 
   return (
@@ -24,7 +27,7 @@ function App() {
           {/*    )*/}
           {/*})}</div>*/}
 
-          <InputTwo
+          {/*<InputTwo
               message={message}
               setMessage={setMessage}
               setTitle={setTitle}
@@ -41,7 +44,14 @@ function App() {
               return (
                   <div key={index}>{el.message}</div>
               )
-          })}</div>
+          })}</div>*/}
+
+          <Header />
+         <div className={'body'}>
+             <Sidebar />
+             <Content />
+         </div>
+
       </div>
 
   );

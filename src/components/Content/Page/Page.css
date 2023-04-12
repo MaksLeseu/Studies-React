@@ -1,0 +1,18 @@
+.page-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkorange;
+    width: 300px;
+    height: 300px;
+    color: white;
+}
+
+.page-two {
+    background-color: #e7fdd8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+}
