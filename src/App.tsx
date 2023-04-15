@@ -6,6 +6,7 @@ import {Button} from "./06/Button";
 import {Header} from "./components/Header/Header";
 import {Sidebar} from "./components/Sidebar/Sidebar";
 import {Content} from "./components/Content/Content";
+import {Select} from "./Select/Select";
 
 function App() {
 
@@ -46,11 +47,13 @@ function App() {
               )
           })}</div>*/}
 
-          <Header />
+          {/*<Header />
          <div className={'body'}>
              <Sidebar />
              <Content />
-         </div>
+         </div>*/}
+
+          <Select />
 
       </div>
 
