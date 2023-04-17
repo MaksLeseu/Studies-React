@@ -25,7 +25,7 @@ export const Select = () => {
         }
     }
 
-    const onClick = () => visible ? setVisible(false) : setVisible(true)
+    const onClick = () => setVisible(!visible)
 
     const sel: any = array.map((i) => (
         <div
