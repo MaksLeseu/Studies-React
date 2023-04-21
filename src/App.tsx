@@ -8,7 +8,7 @@ function App() {
 
   return (
       <div className={'container'}>
-          <Accordion title={'Menu'} collapsed={collapsed} setAccordionBody={setAccordionBody} />
+          {/*<Accordion title={'Menu'} collapsed={collapsed} setAccordionBody={setAccordionBody} />*/}
       </div>
   );
 }
