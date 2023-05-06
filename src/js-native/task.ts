@@ -95,3 +95,53 @@ export const getBanknoteList = (amountOfMoney: number): number[] => {
 чтобы вернуть только одну купюру
 2. Если соответствия нет, то мы возвращаем с начала
 */
+
+
+/*const getBanknoteList = (amountOfMoney) => {
+    const banknotes = [1000, 500, 100, 50, 20, 10, 5, 2, 1]
+    let newArr = []
+
+    /!*for (let i = 0; i < banknotes.length; i++) {
+        if (banknotes[i] === amountOfMoney) {
+            newArr.push(banknotes[i])
+        } else {
+
+        }
+    }*!/
+    let sum = 0
+    for (let i = 0; i < banknotes.length; i++) {
+        sum = sum + banknotes[i]
+        if (sum === amountOfMoney) break
+    }
+
+    return sum
+}
+
+console.log(getBanknoteList(1600))
+console.log(getBanknoteList(1500))
+console.log(getBanknoteList(100))*/
+
+
+// 7. Task
+/*Функция принимает параметром целое не отрицательное число N и возвращает
+сумму всех чисел от 0 до N включительноПопробуйте реализовать функцию
+без использования перебирающих методов.*/
+
+export function sumFirstNumbers(N: number): number {
+    let number = 0
+    for (let i = 0; i <= N; i++) {
+        number = number + i
+    }
+    return number
+}
+
+// 8. Task
+/*Функция getSquarePositiveIntegers принимает параметром массив чисел и
+возвращает новый массив. Новый массив состоит из квадратов целых
+положительных чисел, которые являются элементами исходгого массива.
+    Исходный массив не мутирует.*/
+
+export function getSquarePositiveIntegers(array: Array<number>): Array<number> {
+
+    return array.map(n => n * n)
+}

@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {splitIntoWords} from "./01/01";
 import {BrowserRouter} from "react-router-dom";
+import {Provider} from "react-redux";
+import store from "./Class/store/store";
 
 
 
@@ -14,7 +16,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <BrowserRouter>
-          <App />
+          <Provider store={store}>
+              <App />
+          </Provider>
       </BrowserRouter>
   </React.StrictMode>
 );

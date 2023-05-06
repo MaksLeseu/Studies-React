@@ -1,4 +1,12 @@
-import {getBanknoteList, getSum, getTriangleType, isEvenIndexSumGreater, isSquareGreater, sum} from "./task";
+import {
+    getBanknoteList, getSquarePositiveIntegers,
+    getSum,
+    getTriangleType,
+    isEvenIndexSumGreater,
+    isSquareGreater,
+    sum,
+    sumFirstNumbers
+} from "./task";
 import exp from "constants";
 
 test('Get numbers and return sum numbers', () => {
@@ -52,4 +60,22 @@ test('getBanknoteList', () => {
     expect(getBanknoteList(100)).toBe([100])
     /*expect(getBanknoteList(150)).toBe([100, 50])
     expect(getBanknoteList(2000)).toBe([1000, 1000])*/
+})
+
+// 7. Task
+test('sumFirstNumbers', () => {
+    expect(sumFirstNumbers(10)).toBe(55)
+    expect(sumFirstNumbers(5)).toBe(15)
+    expect(sumFirstNumbers(2)).toBe(3)
+})
+
+// 8. Task
+test('getSquarePositiveIntegers', () => {
+
+    const func = getSquarePositiveIntegers([1, 2, 6, 14])
+
+    expect(func[0]).toBe(1)
+    expect(func[1]).toBe(4)
+    expect(func[2]).toBe(36)
+    expect(func[3]).toBe(196)
 })
