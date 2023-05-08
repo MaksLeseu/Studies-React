@@ -20,3 +20,17 @@ export const Example = () => {
     </>
 
 }
+export const Example2 = () => {
+    const [date, setDate] = useState<Date>(new Date())
+
+    useEffect(() => {
+        setInterval(() => {
+            setDate(new Date())
+        }, 1000)
+    }, [])
+
+    return <>
+        Hello, Italia: {`${date.getUTCHours() + 2} : ${date.getUTCMinutes()} : ${date.getUTCSeconds()}`}
+    </>
+
+}
