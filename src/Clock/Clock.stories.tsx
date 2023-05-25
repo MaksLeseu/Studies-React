@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react";
-import s from './Clock.module.css'
+import {Clock} from "./Clock";
+import s from "./Clock.module.css";
 
+export default {
+    title: 'CLOCK/Time',
+    component: Clock,
+}
 
-export const Clock = () => {
-
+export const ClockStoryExampleStatic = () => {
     const [date, setDate] = useState(new Date())
-
-    useEffect(() => {
-        setDate(new Date())
-    })
 
     const time = `${date.getUTCHours() + 2} : ${date.getUTCMinutes() < 10 ? '0' + date.getUTCMinutes() : date.getUTCMinutes()} : ${date.getUTCSeconds() < 10 ? '0' + date.getUTCSeconds() : date.getUTCSeconds()}`;
 
@@ -21,4 +21,8 @@ export const Clock = () => {
             </div>
         </div>
     )
+}
+
+export const ClockStoryExampleTwo = () => {
+    return <Clock />
 }
