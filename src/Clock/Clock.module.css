@@ -4,7 +4,8 @@
     justify-content: center;
 }
 
-.container {
+
+.container_digital {
     width: 200px;
     height: 50px;
     background-color: black;
@@ -12,7 +13,7 @@
     border-radius: 3px;
 }
 
-.time {
+.time_digital {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,4 +21,20 @@
     font-size: 30px;
     font-weight: 700;
     color: white;
+}
+
+
+.container_pointer {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.arrow {
+    margin: 0 auto;
+    width: 1px;
+    height: 100px;
+    background-color: white;
+    transform: rotate(50deg);
 }

@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import s from './Clock.module.css'
+import {ClockDigital} from "./ClockDigital";
+import {ClockPointer} from "./ClockPointer";
 
 
 export const Clock = () => {
@@ -20,11 +22,8 @@ export const Clock = () => {
 
     return (
         <div className={s.clock}>
-            <div className={s.container}>
-                <span className={s.time}>
-                    {time}
-                </span>
-            </div>
+            {/*<ClockDigital time={time} />*/}
+            <ClockPointer />
         </div>
     )
 }
