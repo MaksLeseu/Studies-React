@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {Accordion} from "./Accordion/Accordion";
 import {Clock} from "./Clock/Clock";
+import {Counter} from "./Counter/Counter";
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
   return (
       <div className={'container'}>
           {/*<Accordion title={'Menu'} collapsed={collapsed} setAccordionBody={setAccordionBody} />*/}
-          <Clock />
+          <Counter />
       </div>
   );
 }
