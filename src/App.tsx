@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Input} from "./06/06";
-import {InputTwo} from "./06/Input";
-import {Button} from "./06/Button";
+import {Search} from "./Search/Search";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
 
@@ -17,6 +16,10 @@ function App() {
 
   return (
       <div className={'container'}>
+          <BrowserRouter>
+              <Search />
+          </BrowserRouter>
+
           {/*<Input message={message} setMessage={setMessage}/>*/}
           {/*<div>{message.map((el, index) => {*/}
           {/*    return (*/}
@@ -24,7 +27,7 @@ function App() {
           {/*    )*/}
           {/*})}</div>*/}
 
-          <InputTwo
+         {/* <InputTwo
               message={message}
               setMessage={setMessage}
               setTitle={setTitle}
@@ -41,7 +44,7 @@ function App() {
               return (
                   <div key={index}>{el.message}</div>
               )
-          })}</div>
+          })}</div>*/}
       </div>
 
   );
